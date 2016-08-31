@@ -1,2 +1,2 @@
 # CG-314
-//This is my classwork.
+# This is my classwork.

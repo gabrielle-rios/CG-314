@@ -1,0 +1,25 @@
+int circleWidth;
+int circleHeight;
+
+void setup(){
+  size(800,800);
+  circleWidth = 100;
+  circleHeight = 150;
+  
+  noFill();
+  background(0);
+  strokeWeight(1);
+  stroke(200,0,240);
+}
+
+void draw(){
+  
+  for (int i = 0; i<100; i++) {
+    ellipse(width/2,height/2,circleWidth,circleHeight);
+    circleWidth = circleWidth + 5;
+    circleHeight = circleHeight + 20;
+  }
+  circleWidth = 600;
+  circleHeight = 450;
+  
+}

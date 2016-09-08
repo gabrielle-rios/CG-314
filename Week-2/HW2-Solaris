@@ -1,0 +1,68 @@
+// Solaris
+
+//Variables for group movement
+int triX;
+int triY;
+int heartX;
+int heartY;
+
+void setup(){
+  // the workspace & variables
+  size(700,700);
+  smooth();
+  noStroke();
+  
+}
+
+//the drawing
+void draw(){
+
+  //simple variables for moving complex shapes
+  triX = 129;
+  triY = 247;//triangle screen glare controls
+  heartX = 143;
+  heartY = 259;//heart controls
+  
+  // the background
+  background(128, 95, 199);
+
+  //the head
+  fill(255, 255, 255);
+  ellipse(271,251,297,245);//helmet
+  fill(222,235,236);
+  ellipse(273,227,256,178);//helmet shadow
+  fill(255, 255, 255);
+  ellipse(225,185,97,71);//helmet shadow covering
+  
+  // the body
+  fill(173,173,28);
+  rect(174,264,245,243);//shaded part
+  
+  fill(234,240,57);
+  rect(122,264,211,243);//front chassis
+  
+  fill(173,173,28);
+  rect(154,346,137,135);//shade by screen
+  
+  fill(87,57,57);
+  rect(166,346,125,125);//screen
+  
+  fill(145, 125, 125);
+  triangle(triX+70,triY+116,triX+52,triY+116,triX+52,triY+153);//screen glare
+  
+  fill(87, 57, 57);
+  ellipse(201,394,35,56);//screen glare covering
+  
+  fill(222, 111, 111);
+  ellipse(heartX+76,heartY+146,25,28);//heart
+  ellipse(heartX+97,heartY+145,25,28);
+  triangle(heartX+107,heartY+153,heartX+87,heartY+175,heartX+65,heartY+153);
+  
+  fill(236, 89, 247);
+  rect(153,305,37,14);//buttons
+  fill(25, 194, 255);
+  rect(196,305,14,14);
+  fill(247, 104, 202);
+  rect(216,305,14,14);
+  
+}  

@@ -1,0 +1,28 @@
+void setup() {
+  size(700,700);
+}
+
+void draw() {
+  //pizza
+  fill(220,199,113);
+  ellipse(367,376,500,500);//bread
+  fill(169,45,12);
+  ellipse(367,376,450,450);//sauce
+  fill(244,245,168);
+  ellipse(367,376,400,400);//cheese
+  
+  //toppings
+  if (keyPressed) {
+    if (key == 'k') {
+      fill(140,32,14);
+      ellipse(mouseX,mouseY,70,70);//pepperoni
+    } else if (key == 'j') {
+      fill(43,67,57);
+      ellipse(mouseX,mouseY,12,12);//spices
+    } else if (key == CODED) {
+      if (key == UP) {
+        ellipse(mouseX,mouseY,200,200);
+      }
+    }
+  }
+}

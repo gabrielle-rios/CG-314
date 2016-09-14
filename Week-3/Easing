@@ -1,0 +1,18 @@
+float x, y;
+float easing = 0.01;
+
+void setup() {
+  size(640,480);
+}
+
+void draw() {
+  if (mousePressed) {
+    float targetX = mouseX;
+    float targetY = mouseY;
+    x+= (targetX - x) * easing;
+    y+= (targetY - y) * easing;
+    ellipse(x,y, 12,12);
+  } else {
+    ellipse(mouseX,mouseY, 12,12);
+  }
+}

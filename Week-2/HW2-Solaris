@@ -4,6 +4,9 @@
 int moveX;
 int moveY;
 
+float theMove = 2;
+
+
 void setup(){
   // the workspace & variables
   size(700,700);

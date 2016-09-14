@@ -109,5 +109,10 @@ void draw(){
   ellipse(moveX+491,moveY+494,56,56);//hand
   fill(128, 95, 199);
   ellipse(moveX+491,moveY+507,49,49);//hand subtract
+
+  moveX = moveX + theMove;
+  
+  if(moveX+520>width || moveX<0){
+   theMove = - theMove;
   
 }  

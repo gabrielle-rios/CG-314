@@ -5,7 +5,8 @@ void setup() {
 void draw() {
   fill(200, 40, 30);
   if (mousePressed) {
-    line(mouseX, mouseY, mouseX, mouseY);
+    rect(mouseX,mouseY,10,10);
+    //line(mouseX, mouseY, mouseX, mouseY);
     if (keyPressed) {
       if (key == '1') {
         strokeWeight(10);

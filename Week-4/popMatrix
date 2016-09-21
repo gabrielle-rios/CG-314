@@ -1,0 +1,25 @@
+void draw() {
+  rotate(QUARTER_PI);
+  fill(255,0,0);
+  rect(0,0,100,100);
+  
+  pushMatrix();
+  float tempAngle = map(mouseX,0,width,0,360);
+  translate(mouseX,mouseY);
+  rotate(radians(tempAngle));
+  fill(255,0,0);
+  rect(-25,-25,50,50);
+  popMatrix();
+  
+  fill(0,255,0);
+  ellipse(100,100,100,100);
+  
+  pushMatrix();
+  float tempAngle2 = map(mouseY,0,height,0,360);
+  translate(mouseY,mouseX);
+  rotate(radians(tempAngle2));
+  fill(0,0,255);
+  triangle(0,0,50,0,0,50);
+  popMatrix();
+  
+}

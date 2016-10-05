@@ -2,6 +2,8 @@
 float moveX;//full body variable x
 float moveY;//full body variable y
 float moveHeart;//heart variable y
+float moveLArm;//left arm variable y
+float moveRArm;//right arm variable y
 float moveIt = 2;//speed of Solaris
 
 float angle = -0.1;
@@ -31,20 +33,22 @@ void draw(){
     
   
   //right arm
+  float moveRArm = offset + sin(angle + 3) * scalar;
+  
   fill(153, 142, 142);
-  rect(moveX+25,moveY+336,146,12);//top of upper arm
+  rect(moveX+25,moveRArm+336,146,12);//top of upper arm
   fill(153, 142, 142);
-  rect(moveX+25,moveY+357,146,12);//bottom of upper arm
+  rect(moveX+25,moveRArm+357,146,12);//bottom of upper arm
   fill(153, 142, 142);
-  rect(moveX+15,moveY+357,24,142);//lower arm
+  rect(moveX+15,moveRArm+357,24,142);//lower arm
   fill(209, 201, 201);
-  ellipse(moveX+27,moveY+351,49,49);//elbow joint
+  ellipse(moveX+27,moveRArm+351,49,49);//elbow joint
   fill(124, 111, 111);
-  ellipse(moveX+27,moveY+351,29,29);//elbow joint screw
+  ellipse(moveX+27,moveRArm+351,29,29);//elbow joint screw
   fill(209, 201, 201);
-  ellipse(moveX+27,moveY+494,56,56);//hand
+  ellipse(moveX+27,moveRArm+494,56,56);//hand
   fill(128, 95, 199);
-  ellipse(moveX+27,moveY+507,49,49);//hand subtract
+  ellipse(moveX+27,moveRArm+507,49,49);//hand subtract
   
   
   //the wheel
@@ -90,25 +94,27 @@ void draw(){
 
   
   //left arm
+  float moveLArm = offset + sin(angle + 1) * scalar;
+  
   fill(29,25,21);
   rect(moveX+346,moveY+314,36,98);//arm opening shading
   fill(153, 142, 142);
-  rect(moveX+346,moveY+336,146,12);//top of upper arm
+  rect(moveX+346,moveLArm+336,146,12);//top of upper arm
   fill(153, 142, 142);
-  rect(moveX+346,moveY+357,146,12);//bottom of upper arm
+  rect(moveX+346,moveLArm+357,146,12);//bottom of upper arm
   fill(153, 142, 142);
-  rect(moveX+478,moveY+357,24,142);//lower arm
+  rect(moveX+478,moveLArm+357,24,142);//lower arm
   fill(209, 201, 201);
-  ellipse(moveX+491,moveY+351,49,49);//elbow joint
+  ellipse(moveX+491,moveLArm+351,49,49);//elbow joint
   fill(124, 111, 111);
-  ellipse(moveX+491,moveY+351,29,29);//elbow joint screw
+  ellipse(moveX+491,moveLArm+351,29,29);//elbow joint screw
   fill(209, 201, 201);
-  ellipse(moveX+491,moveY+494,56,56);//hand
+  ellipse(moveX+491,moveLArm+494,56,56);//hand
   fill(128, 95, 199);
-  ellipse(moveX+491,moveY+507,49,49);//hand subtract
+  ellipse(moveX+491,moveLArm+507,49,49);//hand subtract
   
   //the bouncing heart
-  float moveHeart = offset + sin(angle + -0.6) * scalar;
+  float moveHeart = offset + sin(angle + -0.6) * 10;//scalar
   
   fill(222, 111, 111);
   ellipse(moveX+211,moveHeart+397,28,28);//heart

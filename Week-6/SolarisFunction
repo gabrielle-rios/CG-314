@@ -1,0 +1,108 @@
+//Solaris in Functons
+
+//Variables for group movement
+float tempX;
+float tempY;
+float tempSize = 0;//don't mess with scale
+
+float theMove = 2;
+
+void setup(){
+  // the workspace & variables
+  size(1000,720);
+  smooth();
+  noStroke();  
+  background(128, 95, 199);  
+  //simple variables for moving complex shapes
+  tempX = 122;
+  tempY = -60;//arm movement controls  
+}
+
+void draw(){//Input Function
+  drawSolaris(tempX,tempY,tempSize);
+  drawSolaris(400,400,tempSize);
+  drawSolaris(800,tempY,tempSize);
+  }
+
+void drawSolaris(float tempX, float tempY, float tempSize){//Define Function
+  fill(255, 255, 255);
+  ellipse(tempX+261,tempY+241,tempSize+294,tempSize+245);//helmet
+  fill(222,235,236);
+  ellipse(tempX+263,tempY+217,tempSize+256,tempSize+178);//helmet shadow
+  fill(255, 255, 255);
+  ellipse(tempX+215,tempY+175,tempSize+97,tempSize+71);//helmet shadow covering
+      
+  //right arm
+  fill(153, 142, 142);
+  rect(tempX+25,tempY+336,tempSize+146,tempSize+12);//top of upper arm
+  fill(153, 142, 142);
+  rect(tempX+25,tempY+357,tempSize+146,tempSize+12);//bottom of upper arm
+  fill(153, 142, 142);
+  rect(tempX+15,tempY+357,tempSize+24,tempSize+142);//lower arm
+  fill(209, 201, 201);
+  ellipse(tempX+27,tempY+351,tempSize+49,tempSize+49);//elbow joint
+  fill(124, 111, 111);
+  ellipse(tempX+27,tempY+351,tempSize+29,tempSize+29);//elbow joint screw
+  fill(209, 201, 201);
+  ellipse(tempX+27,tempY+494,tempSize+56,tempSize+56);//hand
+  fill(128, 95, 199);
+  ellipse(tempX+27,tempY+507,tempSize+49,tempSize+49);//hand subtract
+    
+  //the wheel
+  fill(87,57,57);
+  triangle(tempX+211,tempY+467,tempX+271,tempY+612,tempX+309,tempY+475);//leg
+  fill(209, 201, 201);
+  ellipse(tempX+269,tempY+635,tempSize+57,tempSize+69);//wheel
+  fill(87,57,57);
+  rect(tempX+232,tempY+596,tempSize+73,tempSize+21);//wheel groove
+  fill(78, 71, 71);
+  ellipse(tempX+269,tempY+635,tempSize+31,tempSize+32);//inner wheel
+  fill(124, 111, 111);
+  ellipse(tempX+269,tempY+635,tempSize+13,tempSize+14);//wheel spoke
+    
+  // the body
+  fill(173,173,28);
+  rect(tempX+164,tempY+254,tempSize+245,tempSize+243);//shaded part
+  fill(234,240,57);
+  rect(tempX+112,tempY+254,tempSize+211,tempSize+243);//front chassis
+  fill(75,60,43);
+  rect(tempX+346,tempY+309,tempSize+47,tempSize+103);//arm opening
+  fill(173,173,28);
+  rect(tempX+144,tempY+334,tempSize+137,tempSize+131);//shade by screen
+  fill(87,57,57);
+  rect(tempX+156,tempY+334,tempSize+125,tempSize+125);//screen
+  fill(145, 125, 125);
+  triangle(tempX+188,tempY+353,tempX+170,tempY+353,tempX+170,tempY+390);//screen glare
+  fill(87, 57, 57);
+  ellipse(tempX+191,tempY+384,tempSize+25,tempSize+56);//screen glare covering
+  fill(222, 111, 111);
+  ellipse(tempX+211,tempY+397,tempSize+28,tempSize+28);//heart
+  ellipse(tempX+228,tempY+397,28,28);
+  triangle(tempX+240,tempY+404,tempX+220,tempY+427,tempX+199,tempY+404);
+  fill(236, 89, 247);
+  rect(tempX+143,tempY+295,tempSize+37,tempSize+14);//buttons
+  fill(25, 194, 255);
+  rect(tempX+186,tempY+295,tempSize+14,tempSize+14);
+  fill(247, 104, 202);
+  rect(tempX+206,tempY+295,tempSize+14,tempSize+14);
+  fill(87,57,57);
+  rect(tempX+111,tempY+243,tempSize+300,tempSize+14);//helmet opening
+  
+  //left arm
+  fill(29,25,21);
+  rect(tempX+346,tempY+314,tempSize+36,tempSize+98);//arm opening shading
+  fill(153, 142, 142);
+  rect(tempX+346,tempY+336,tempSize+146,tempSize+12);//top of upper arm
+  fill(153, 142, 142);
+  rect(tempX+346,tempY+357,tempSize+146,tempSize+12);//bottom of upper arm
+  fill(153, 142, 142);
+  rect(tempX+478,tempY+357,tempSize+24,tempSize+142);//lower arm
+  fill(209, 201, 201);
+  ellipse(tempX+491,tempY+351,tempSize+49,tempSize+49);//elbow joint
+  fill(124, 111, 111);
+  ellipse(tempX+491,tempY+351,tempSize+29,tempSize+29);//elbow joint screw
+  fill(209, 201, 201);
+  ellipse(tempX+491,tempY+494,tempSize+56,tempSize+56);//hand
+  fill(128, 95, 199);
+  ellipse(tempX+491,tempY+507,tempSize+49,tempSize+49);//hand subtract  
+}
